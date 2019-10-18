@@ -83,8 +83,7 @@ object ScalaBook {
     def pepper()={println("pepper");true}
     println(salt()&pepper()) //& checks both sides
     println(salt()&&pepper()) // && checks left side and gives res
-
-    //partially applied function
+    
     def sum(a:Int,b:Int,c:Int)= a+b+c
     val n=sum _
     println(n(1,2,3))
