@@ -48,7 +48,7 @@ object Practice1 {
 
 
 
-//  def msort[T](less: (T, T) => Boolean)(xs: List[T]): List[T] =
+/*//  def msort[T](less: (T, T) => Boolean)(xs: List[T]): List[T] =
 //  {
 //    def merge(xs: List[T], ys: List[T]): List[T] =(xs, ys) match {
 //      case (Nil, _) => ys
@@ -63,7 +63,7 @@ object Practice1 {
 //      val (ys, zs) = xs splitAt n
 //      merge(msort(less)(ys), msort(less)(zs))
 //    }
-//  }
+//  }*/
 
   def rotate(arr: Array[Int], n: Int): Unit = {
     println(arr.splitAt(0))

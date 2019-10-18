@@ -46,5 +46,5 @@ object Exercise  extends App {
 //    if(args.length!=1)
 //      throw new IllegalArgumentException("invalid arg 1111")
 //    else
-      println(cal("1 1 + 2 3 * +"))*/
+    //  println(cal("1 1 + 2 3 * +"))*/
 }

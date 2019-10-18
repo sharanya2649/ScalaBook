@@ -145,6 +145,7 @@ class Practice2 {
 
 
 }
+/*
 //
 //package com.techsophy.excercise
 //
@@ -249,4 +250,5 @@ class Practice2 {
 //  }
 //
 //}
+*/
 

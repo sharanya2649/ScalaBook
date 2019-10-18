@@ -8,7 +8,7 @@ import scala.concurrent.duration._
 object Future_prac extends App {
   val fut: Future[Int] =Future{20}
   val result: Future[Int] = fut.map(x=>x+1)
-  println("hello")
+  println("hello world")
   val fut2 = Future { Thread.sleep(10000); 21 + 21 }
   val result2: Future[Int] = fut2.map(x=>x+1)
   val valid=fut.filter{a=>a>0}
