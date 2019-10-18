@@ -108,14 +108,29 @@ object ScalaBook {
 //      def v:String // can't override def with val
       def m:String
     }
+    def removeDuplicates(list: List[String]):List[String]={
+      if(list.isEmpty) list
+      else{
+        list.head:: removeDuplicates(list.tail.filter(x=>x!=list.head))
+      }
+    }
 
     case class Person(name: String,isMale: Boolean,children: Person*)
     val lara = Person("Lara", false)
     val bob = Person("Bob", true)
     val julie = Person("Julie", false, lara, bob)
     val persons = List(lara, bob, julie)
-
     println(persons.filter{p=> !p.isMale}.flatMap{x=>(x.children.map{c=>(x.name,c.name)})})
+
+    case class Book(title:String,author:String*)
+    val books=List(Book("The java language Program","Gosling","Joy Bill"),Book("Elements of ML","Ullman","Joy Bill"),Book("Programming in Modula-2","Wirth, Niklaus"))
+    println(for(b<-books if(b.title.indexOf("Program")>=0)) yield b.title)
+
+    val lis = for (b1 <- books; b2 <- books if b1 != b2;a1 <- b1.author; a2 <- b2.author if a1 == a2)yield a1
+    println(lis)
+    println(removeDuplicates(lis))
+
+
   }
 
 }
